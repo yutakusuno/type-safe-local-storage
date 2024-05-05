@@ -1,30 +1,49 @@
-# React + TypeScript + Vite
+# Type-Safe Local Storage Demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains a demo for type-safe local storage implementation using TypeScript. The demo showcases how to store and retrieve items from local storage in a type-safe manner.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The demo consists of the following files:
 
-## Expanding the ESLint configuration
+- items-storage.ts: Defines a class ItemsStorage responsible for managing items in local storage.
+- custom-storage.ts: Provides a generic class CustomStorage for interacting with local storage.
+- utils.ts: Contains utility functions for validating items and item fields.
+- App.tsx: React component demonstrating the usage of the ItemsStorage class.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Installation
 
-- Configure the top-level `parserOptions` property like this:
+To run the demo locally, follow these steps:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+Clone the repository:
+
+```
+git clone git@github.com:yutakusuno/type-safe-local-storage.git
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Install dependencies:
+
+```
+bun i
+```
+
+Those who have not installed bun: https://bun.sh/docs/installation
+
+Start the development server:
+
+```
+bun run dev
+```
+
+## Usage
+
+In the App.tsx file, you can find a simple React component demonstrating how to use the ItemsStorage class:
+
+- Click the "Add Item" button to add a random item to local storage.
+- Click the "Get Items" button to retrieve items from local storage and log them to the console.
+- Click the "Clear Items" button to remove all items from local storage.
+
+## Notes
+
+- The ItemsStorage class ensures that only valid items are stored and retrieved from local storage.
+- Type safety is maintained throughout the process, ensuring that item fields are of the correct type.
