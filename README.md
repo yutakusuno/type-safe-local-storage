@@ -2,6 +2,8 @@
 
 This repository contains a demo for type-safe local storage implementation using TypeScript. The demo showcases how to store and retrieve items from local storage in a type-safe manner.
 
+_**Note**: This repo's article was featured in [Codeminer42 Dev Weekly #10](https://blog.codeminer42.com/codeminer42-dev-weekly-10/#:~:text=%5BTS%5D%20Consider%20type,for%20further%20exploration.) on Codeminer42’s engineering blog._
+
 ## Overview
 
 The demo consists of the following files:
