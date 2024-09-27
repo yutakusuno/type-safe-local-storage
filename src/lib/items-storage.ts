@@ -18,7 +18,7 @@ class ItemsStorage {
 
   public getItems(): Item[] | null {
     try {
-      const items = this.storage.getItems();
+      const items = this.storage.getItems() ?? [];
       if (!isValidItems(items)) {
         throw new Error('Invalid items');
       }
@@ -36,7 +36,7 @@ class ItemsStorage {
         throw new Error('Invalid item fields');
       }
 
-      const currentItems = this.storage.getItems();
+      const currentItems = this.storage.getItems() ?? [];
       if (!isValidItems(currentItems)) {
         throw new Error('Invalid items');
       }
